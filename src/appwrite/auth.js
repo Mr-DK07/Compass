@@ -6,7 +6,9 @@ export class AuthService {
   account;
 
   constructor() {
-    this.client.setEndpoint(config.appwriteUrl).setProject(config.projectId);
+    this.client
+      .setEndpoint(config.appwriteUrl)
+      .setProject(config.appwriteProjectId);
     this.account = new Account(this.client);
   }
 
@@ -30,7 +32,7 @@ export class AuthService {
 
   async login({ email, password }) {
     try {
-      return await this.account.createEmailSession(email, password);
+      return await this.account.createEmailPasswordSession(email, password);
     } catch (error) {
       console.log(error);
     }
@@ -40,9 +42,13 @@ export class AuthService {
     try {
       return await this.account.get();
     } catch (error) {
-      console.log(error);
+      if (error.code === 401) {
+        console.log("User is not authenticated.", error);
+        return null;
+      }
+      console.log("Appwrite :: getCurrentUser :: error", error);
+      throw error; 
     }
-    return null;
   }
 
   async logout() {
