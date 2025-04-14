@@ -1,3 +1,4 @@
+import Select from "./Select";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Container from "./container/Container";
@@ -11,7 +12,6 @@ import PostForm from "./postform/PostForm";
 import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
 import Input from "./Input";
-import Select from "./Select";
 export {
     Header,
     Footer,
@@ -25,6 +25,6 @@ export {
     PostForm,
     PostCard,
     AuthLayout, 
-    Input,
     Select,
+    Input,
 }
