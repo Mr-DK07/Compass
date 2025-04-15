@@ -75,13 +75,14 @@ export class Service {
     }
   }
 
-  async deletePost({ slug }) {
+  async deletePost(slug) {
     try {
       await this.databases.deleteDocument(
         config.appwriteDatabaseId,
         config.appwriteCollectionId,
         slug
       );
+
       return true;
     } catch (error) {
       console.log(error);
@@ -112,7 +113,7 @@ export class Service {
     }
   }
 
-  getfilePreview(fileId) {
+  async getFilePreview(fileId) {
     return this.bucket.getFilePreview(config.appwriteBucketId, fileId);
   }
 }
