@@ -113,8 +113,8 @@ export class Service {
     }
   }
 
-  async getFilePreview(fileId) {
-    return this.bucket.getFilePreview(config.appwriteBucketId, fileId);
+ getFilePreview(fileId) {  
+    return this.bucket.getFileView(config.appwriteBucketId, fileId);
   }
 }
 
