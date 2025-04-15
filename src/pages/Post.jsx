@@ -35,32 +35,36 @@ export default function Post() {
   return post ? (
     <div className="py-8">
       <Container>
-        <div className="w-[300px] h-80 flex justify-center mb-5 relative border rounded-xl p-2">
-          {post.featuredImage && (
-            <img
-              src={appwriteService.getFilePreview(post.featuredImage)}
-              alt={post.title}
-              className="rounded-xl"
-            />
-          )}
+        <div className="w-[60%] mx-auto grid justify-center mb-5 relative  rounded-xl p-2">
+          <div className="w-full">
+            {post.featuredImage && (
+              <img
+                src={appwriteService.getFilePreview(post.featuredImage)}
+                alt={post.title}
+                className="rounded-xl w-full h-[20rem] mb-4"
+              />
+            )}
+          </div>
+          <div className="w-full mb-6">
+            <h1 className="text-2xl font-bold">{post.title}</h1>
+          </div>
+          <div className="w-full browser-css">{parse(post.content)}</div>
 
-          {isAuthor && (
-            <div className="absolute right-6 top-15">
-              <Link to={`/edit-post/${post.$id}`}>
-                <Button bgColor="bg-green-500" className="mr-3">
-                  Edit
+          <div className="w-full flex">
+            {isAuthor && (
+              <div className="mt-4 align-content-end">
+                <Link to={`/edit-post/${post.$id}`}>
+                  <Button bgColor="bg-green-500" className="mr-3">
+                    Edit
+                  </Button>
+                </Link>
+                <Button bgColor="bg-red-500" onClick={deletePost}>
+                  Delete
                 </Button>
-              </Link>
-              <Button bgColor="bg-red-500" onClick={deletePost}>
-                Delete
-              </Button>
-            </div>
-          )}
+              </div>
+            )}
+          </div>
         </div>
-        <div className="w-full mb-6">
-          <h1 className="text-2xl font-bold">{post.title}</h1>
-        </div>
-        <div className="browser-css">{parse(post.content)}</div>
       </Container>
     </div>
   ) : null;
