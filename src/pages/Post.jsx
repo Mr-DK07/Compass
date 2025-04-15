@@ -35,7 +35,7 @@ export default function Post() {
   return post ? (
     <div className="py-8">
       <Container>
-        <div className="w-[300px] h-[550px] flex justify-center mb-5 relative border rounded-xl p-2">
+        <div className="w-[300px] h-80 flex justify-center mb-5 relative border rounded-xl p-2">
           {post.featuredImage && (
             <img
               src={appwriteService.getFilePreview(post.featuredImage)}
