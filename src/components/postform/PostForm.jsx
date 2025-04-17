@@ -128,8 +128,8 @@ export default function PostForm({ post }) {
         />
         <Button
           type="submit"
-          bgColor={post ? "bg-green-500" : undefined}
-          className="w-full"
+          bgColor={post ? "bg-green-500 hover:bg-green-600  " : undefined}
+          className="w-full hover:bg-sky-500"
         >
           {post ? "Update" : "Submit"}
         </Button>

@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Logo from "../index.js";
+import Logo from "../Logo";
 
 function Footer() {
   return (
     <section className="bottom-0 z-10 overflow-hidden bg-gray-900">
       <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="flex flex-wrap">
-          <div className="w-full p-6 md:w-1/2 lg:w-5/12">
+          
+          <div className="w-full p-6 sm:w-1/4 md:w-1/4 lg:w-5/12">
             <div className="flex h-full flex-col justify-between">
-              <div className="mb-4 inline-flex items-center">
-                {/* <Logo width="100px" /> */}
+              <div className="mb-4 inline-flex items-center text-sky-500">
+                <Logo />
               </div>
               <div>
                 <p className="text-sm text-gray-400 hover:text-gray-300">
@@ -19,7 +20,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-2/12">
+          <div className="w-full p-6 sm:w-1/4 md:w-1/4 lg:w-2/12">
             <div className="h-full">
               <h3 className="tracking-px mb-9 font-semibold text-xs uppercase text-gray-500">
                 Company
@@ -60,7 +61,7 @@ function Footer() {
               </ul>
             </div>
           </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-2/12">
+          <div className="w-full p-6 sm:w-1/4 md:w-1/4 lg:w-2/12">
             <div className="h-full">
               <h3 className="tracking-px mb-9  font-semibold text-xs d uppercase text-gray-500">
                 Support
@@ -101,7 +102,7 @@ function Footer() {
               </ul>
             </div>
           </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-3/12">
+          <div className="w-full p-6 sm:w-1/4 md:w-1/4 lg:w-2/12">
             <div className="h-full">
               <h3 className="tracking-px mb-9  font-semibold text-xs d uppercase text-gray-500">
                 Legals
