@@ -1,6 +1,6 @@
+import "./App.css";
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import "./App.css";
 import authService from "./appwrite/auth";
 import { login, logout } from "./store/authSlice";
 import { Footer, Header } from "./components/index";
@@ -28,7 +28,7 @@ function App() {
       <div className="w-full block">
         <Header />
         <main>
-           <Outlet />
+          <Outlet />
         </main>
         <Footer />
       </div>
