@@ -12,8 +12,10 @@ import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
 import Select from "./Select";
 import Input from "./Input";
+import Hero from "./Hero";
 export {
     Header,
+    Hero,
     Footer,
     Container,
     Logo,
@@ -27,4 +29,5 @@ export {
     AuthLayout, 
     Select,
     Input,
+    
 }
