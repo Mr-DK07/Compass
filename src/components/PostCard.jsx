@@ -11,10 +11,10 @@ function PostCard({ $id, title, featuredImage }) {
             <img
               src={appwriteService.getFilePreview(featuredImage)}
               alt={title}
-              className="rounded-lg aspect-3/2 object-cover"
+              className="rounded-lg aspect-3/2 h-80 object-cover"
             />
           ) : (
-            <div className="rounded-xl bg-gray-200 h-48 flex items-center justify-center">
+            <div className="rounded-xl bg-gray-200 h-98 flex items-center justify-center">
               <span>No Image</span>
             </div>
           )}
