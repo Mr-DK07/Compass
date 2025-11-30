@@ -35,7 +35,7 @@ export default function Post() {
   return post ? (
     <div className="py-8">
       <Container>
-        <div className="sm:w-1/4 md:w-1/4 lg:w-1/4 mx-auto grid justify-center mb-5 relative rounded-xl p-2">
+        <div className="sm:w-1/2 md:w-1/2 lg:w-1/2 mx-auto grid justify-center mb-5 relative rounded-xl p-2">
           <div className="w-full">
             {post.featuredImage && (
               <img
